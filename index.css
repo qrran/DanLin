@@ -1,0 +1,123 @@
+/* 网页布局基本设置 */
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  /* padding: 0 30px; */
+  margin: 0;
+  cursor: url(../html/25_2HeartCursor.png), pointer;
+}
+body {
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+/* 左上logo */
+.logo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  height: 0px;
+  /* background-color: #f1f1f1; */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px #ff00de, 0 0 70px #ff00de,
+    0 0 80px #ff00de, 0 0 100px #ffc7f82c, 0 5px black;
+  background-color: #dcdcf6;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* logo里的字 */
+header {
+  padding: 30px 80px;
+  /* margin: 30px 80px;
+  不用margin 用padding 背景色不塌 */
+  cursor: pointer;
+  position: absolute;
+}
+/* 测试div结构 */
+/* 主页右上按钮 */
+nav {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100px;
+  line-height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  font-weight: bold;
+  background-color: #dcdcf6;
+  position: sticky;
+  top: 0;
+  /* 改成sticky之后头部栏可终于不飘着了
+  main部分没叠在后面 nice 
+  用sticky 要加位置和什么时候开始stick*/
+  padding: 0 80px;
+}
+nav a {
+  margin-left: 30px;
+  color: rgb(99, 119, 151);
+  text-decoration: none;
+  font-size: 16px;
+}
+nav a:hover {
+  color: #eef0f1;
+  cursor: pointer;
+}
+/* .menu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+} */
+/* profile */
+img {
+  width: 50%;
+  padding: 20px 0;
+  display: block;
+  /* background-color: #fff; */
+}
+/* .leftcontent {
+} */
+.rightcontent {
+  /* display: flex;
+  flex-direction: ; */
+  margin: 100px auto;
+}
+/* main 整体目前还不需要开flex*/
+/* 现在开flex是因为有aside 要两个块 */
+main {
+  padding: 0 80px;
+  display: flex;
+  /* border: 20px solid black; */
+  height: 1000px;
+  /* line-height: 500px; 这是一种居中方法*/
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* background-color: #eef0f1; */
+  background-color: #e6e6fa;
+  font-size: 18px;
+}
+
+footer {
+  height: 30vh;
+  background-color: #ceceff;
+  text-align: center;
+}
+/* 移动端适配 */
+@media (max-width: 800px) {
+  * {
+    /* display: flex; */
+    flex-direction: column;
+  }
+  nav a {
+    display: none;
+  }
+
+  /* .logo {
+    size: 20vw; 改
+  } */
+  body {
+    /* background-color: #f1f1f1; */
+    flex-direction: colume;
+  }
+}
